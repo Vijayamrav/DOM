@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ID Card</title>
+    <style>
+        .id-card {
+            border: 1px solid black;
+            width: 300px;
+            padding: 20px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .id-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="studentIdCard" class="id-card">
+        <img src="student_photo.jpg" alt="Student Photo">
+        <h2 id="studentName">John Doe</h2>
+        <p id="studentID">ID: 123456</p>
+        <p id="studentBatch">Batch: 2024</p>
+        <p id="studentDepartment">Department: Computer Science</p>
+    </div>
+
+    <script>
+        // Create student details
+        let studentDetails = {
+            name: "John Doe",
+            id: "123456",
+            batch: "2024",
+            department: "Computer Science"
+        };
+
+        // Get the container div
+        let idCardContainer = document.getElementById('studentIdCard');
+
+        // Create and append elements
+        let studentNameElement = document.createElement('h2');
+        studentNameElement.textContent = studentDetails.name;
+        idCardContainer.appendChild(studentNameElement);
+
+        let studentIDElement = document.createElement('p');
+        studentIDElement.textContent = "ID: " + studentDetails.id;
+        idCardContainer.appendChild(studentIDElement);
+
+        let studentBatchElement = document.createElement('p');
+        studentBatchElement.textContent = "Batch: " + studentDetails.batch;
+        idCardContainer.appendChild(studentBatchElement);
+
+        let studentDeptElement = document.createElement('p');
+        studentDeptElement.textContent = "Department: " + studentDetails.department;
+        idCardContainer.appendChild(studentDeptElement);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <script>
+    function changeBackgroundColor() {
+        // Generate random color
+        var randomColor = generateRandomColor();
+        
+        // Apply random color to the body background
+        document.body.style.backgroundColor = randomColor;
+    }
+    
+    function generateRandomColor() {
+        // Generate random values for red, green, and blue
+        var red = Math.floor(Math.random() * 256);
+        var green = Math.floor(Math.random() * 256);
+        var blue = Math.floor(Math.random() * 256);
+        
+        // Construct the color string in RGB format
+        var randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+        
+        return randomColor;
+    }
+    </script>
+    
+
+</body>
+</html>

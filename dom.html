@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name">vijay</h1>
+    <label>enter your name</label>
+    <input type="text" value="name" class="myname">
+    <input type="submit" value="submit" class="submit-button">
+
+    <script>
+        var name=prompt("enter your name");
+        let name1=document.getElementById('name');
+        name1.innerHTML=`hello ${name}`;
+
+        // let nameV=document.getElementsByTagName('h1')[0];
+        // nameV.innerHTML='<h1>hello world</h1>';
+        // console.log(nameV);
+        // let compBody=document.getElementsByTagName('body')[0];
+        // compBody.style.backgroundColor='yellow';
+
+        // let getName=document.getElementsByClassName('myname')[0];
+        // let getSubmit=document.getElementsByClassName('submit-button')[1];
+
+
+
+
+
+    </script>
+</body>
+</html>

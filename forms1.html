@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="myForm">
+        <label for="name">username:</label>
+        <input type="text" id="name"><br><br>
+        <label for="pwd">password:</label>
+        <input type="password" id="pwd"><br><br>
+        <input type="submit">
+        
+    </form>
+    <h2></h2>
+    <script>
+     let form=document.getElementById('myForm');
+     form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        let getExisting=localStorage.getItem('UserDetails');
+        let array=getExisting?JSON.parse(getExisting):[];
+        let username=document.getElementById('name').value;
+        let password1=document.getElementById('pwd').value;
+        let UserDetails={
+            name:username,
+            password:password1
+        }
+        uname=false; 
+        for(i=0;i<array.length;i++){
+            let existingArray=JSON.parse(array[i]);
+            // if(existingArray.name==username){
+            //     let h2=document.getElementsByTagName('h2')[0];
+            //     h2.innerHTML='user already exists';
+            //     document.body.appendChild(h2);
+            //     break;
+            // }
+           
+            if(existingArray.name==username){
+                 uname=true;
+            }
+        }  
+        if(uname){
+            let h2=document.getElementsByTagName('h2')[0];
+                h2.innerHTML='user already exists';
+               document.body.appendChild(h2);
+                
+        }   
+        else{ 
+        let StringUserDetails=JSON.stringify(UserDetails);
+        array.push(StringUserDetails);
+        
+        localStorage.setItem('UserDetails',JSON.stringify(array));
+    }
+     })        
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="name">i'm vijay</h1>
+    <p class="name">im pursuing MCA</p>
+    <script>
+         var name=prompt("enter your name");
+        let getH1=document.getElementsByTagName('h1'); // the h1 tag is stored as collection of array in getH1
+        // if we want to access the content in h1 we have to access them using index
+        getH1[0].innerHTML=`good evening ${name}`;
+
+        let queryselect=document.querySelectorAll('.name');
+        console.log(queryselect);
+       
+        
+    </script>
+</body>
+</html>

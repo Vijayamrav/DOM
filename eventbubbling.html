@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grandparent" style="background-color: aqua;padding: 50px;">
+        <p>grandparent</p>
+        <div class="parent" style="background-color: beige; padding:40px;">
+            <p>parent</p>
+            <div class="child" style="background-color: blueviolet; padding:30px;">
+             <p>child</p>
+            </div>
+        </div>
+    </div>
+    <script>
+      gp=document.getElementsByClassName('grandparent')[0];
+      p=document.getElementsByClassName('parent')[0];
+      c=document.getElementsByClassName('child')[0];
+      gp.addEventListener('click',()=>{
+         console.log('gp is triggered');
+        gp.style.backgroundColor='black';
+        
+      })
+      p.addEventListener('click',(e)=>{
+         console.log('p is triggered');
+        p.style.backgroundColor='orange';
+        e.stopImmediatePropagation();
+        
+      })
+      c.addEventListener('click',(e)=>{
+         c.style.backgroundColor='yellow';
+        console.log('c is trigrred');
+         e.stopImmediatePropagation();
+      })
+    </script>
+</body>
+</html>

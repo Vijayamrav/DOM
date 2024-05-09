@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="main" style="border:1px solid black;height:400px;width:500px">
+        <button class="button"><h2>generate otp</h2></button>
+        <h1 class="h1"></h1></div>
+</body>
+<script>
+    let div=document.getElementsByClassName('main')[0];
+   
+    let button=document.getElementsByClassName('button')[0];
+    let h1=document.getElementsByClassName('h1')[0];
+    let body=document.getElementsByTagName('body')[0];
+    button.addEventListener('click',()=>{
+        let otp=Math.ceil(Math.random()*999999);
+        let red=Math.random()*256;
+        let green=Math.ceil(Math.random()*256);
+        let blue=Math.ceil(Math.random()*256);
+        var randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+        if(otp>99999){
+        h1.innerHTML=otp;
+        }
+        div.style.backgroundColor=randomColor;
+    })
+
+    // styling
+    div.style.display='flex';
+    div.style.flexDirection='column';
+    div.style.borderRadius='30px';
+    // div.style.backgroundColor='purple';
+    button.style.borderRadius='30px';
+    button.style.height='60px';
+    button.style.color='black';
+    button.style.backgroundColor='orange';
+    
+    h1.style.marginTop='100px';
+    h1.style.marginLeft='100px';
+    h1.style.fontSize='80px';
+
+    body.style.display='flex';
+    body.style.justifyContent='center';
+
+
+
+</script>
+</html>

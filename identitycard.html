@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="idcard">
+    <h2>IDENTITY CARD</h2>
+    <img src="./images/picture.png" alt="profilepic">
+    <div class="stu">
+        <h4 class="name">Name:M.Vijay Varma</h4>
+        <h4 class="name">Course:MCA</h4>
+        <h4 class="name">Contact:7032786479</h4>
+    </div>
+        
+        
+        
+        
+        
+        
+        
+    
+    </div>
+    </div>
+    <script>
+        let borderCreate=document.getElementsByClassName('idcard')[0]; // returns a collection of elements
+        borderCreate.style.border="1px solid black";
+        borderCreate.style.height='350px';
+        borderCreate.style.width='500px';
+
+        let idTitle=document.getElementsByTagName('h2')[0];
+        idTitle.style.backgroundColor='blue';
+        idTitle.style.padding='10px';
+        idTitle.style.textAlign='center';
+        idTitle.style.marginTop='0px';
+        idTitle.style.color='white';
+
+        let profilePic=document.getElementsByTagName('img')[0];
+        profilePic.style.height='150px';
+        profilePic.style.width='150px';
+        profilePic.style.marginLeft='10px';
+
+        let std=document.get
+
+        let nameOf=document.getElementsByTagName('h3')[0];
+        // nameOf.style.display='inline-block';
+
+        let stuDetails=document.getElementsByClassName('student')[0];
+        stuDetails.style.display='flex';
+        
+        stuDetails.style.gap='15px';
+
+        let contact=document.getElementsByClassName('contact');
+        contact.setAttribute("style","position:absolute;top:40px");
+
+        // dividing
+        let details=document.getElementsByClassName('name')[0];
+        details.style.position='absolute';
+        details.style.left='100px';
+        
+        
+ 
+        
+
+        
+    </script>
+</body>
+</html>
